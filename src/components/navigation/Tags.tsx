@@ -2,6 +2,26 @@ import * as React from "react";
 import { Label, Button, Icon } from "semantic-ui-react";
 import styled from "styled-components";
 
+const tags = [
+  {
+    label: "White",
+    selected: true
+  },
+  {
+    label: "Bamboo",
+    selected: true
+  },
+  {
+    label: "Red"
+  },
+  {
+    label: "Yellow"
+  },
+  {
+    label: "Amber"
+  }
+];
+
 const LabelGroup = styled(Label.Group)`
   display: flex;
   overflow-x: auto;
@@ -15,15 +35,11 @@ const MoreButton = styled(Button)`
 
 const Tags = props => (
   <LabelGroup tag {...props}>
-    <Label as="a" color="green">
-      White
-    </Label>
-    <Label as="a" color="green">
-      Bamboo
-    </Label>
-    <Label as="a">Red</Label>
-    <Label as="a">Yellow</Label>
-    <Label as="a">Amber</Label>
+    {tags.map(({ label, selected }, index) => (
+      <Label as="a" color={selected ? "green" : undefined} key={index}>
+        {label}
+      </Label>
+    ))}
     <MoreButton color="pink" compact basic size="mini">
       More
       <Icon name="arrow right" />

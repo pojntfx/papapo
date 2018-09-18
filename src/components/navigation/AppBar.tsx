@@ -4,6 +4,16 @@ import styled from "styled-components";
 /// <reference path='../../types/logo.d.ts'/>
 import logo from "../../assets/logo.png";
 
+const leftItem = {
+  icon: "search",
+  content: "Search"
+};
+
+const rightItem = {
+  icon: "upload",
+  content: "Upload"
+};
+
 const AppBarContainer = styled(Container)`
   padding-top: 1em !important;
 `;
@@ -30,14 +40,14 @@ const AppBar = props => (
   <AppBarContainer>
     <AppBarWrapper {...props}>
       <Action>
-        <Button icon="search" content="Search" color="green" />
+        <Button color="green" {...leftItem} />
       </Action>
       <LogoWrapper href="#">
         <Logo src={logo} />
       </LogoWrapper>
       <Menu.Menu position="right">
         <Action>
-          <Button icon="upload" content="Upload" color="pink" />
+          <Button color="pink" {...rightItem} />
         </Action>
       </Menu.Menu>
     </AppBarWrapper>
