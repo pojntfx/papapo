@@ -1,0 +1,8 @@
+{
+  "short_name": "PaPaPo",
+  "name": "PaPaPo",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#69A438",
+  "background_color": "#ffffff"
+}

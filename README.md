@@ -5,14 +5,17 @@ A simple video upload site for pandas (and Pascals).
 ## Usage
 
 ```bash
-# Start development version on http://localhost:3000
+# Start development version on http://localhost:1234
 $ npm run dev
-Compiled successfully!
-(...)
-# Build production version in build/
+Server running at http://localhost:1234
+✨  Built in 2.92s.
+# Build production version in dist/
 $ npm run build
-Compiled successfully.
-(...)
+✨  Built in 3.69s.
+
+dist/src.283047f7.map    207.57 KB     42ms
+dist/src.283047f7.js     101.64 KB    2.64s
+dist/index.html              292 B    974ms
 # Start production version on http://localhost:5000
 $ npm run start
 ┌────────────────────────────────────────────────────┐
