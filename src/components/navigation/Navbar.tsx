@@ -15,13 +15,17 @@ const navbarItems = [
   }
 ];
 
+const NavbarContainer = styled(Container)`
+  overflow-x: auto;
+`;
+
 const NavbarWrapper = styled(Menu)`
   margin-top: 1em !important;
 `;
 
 const Navbar = props => (
-  <Container>
-    <NavbarWrapper {...props} widths="2">
+  <NavbarContainer>
+    <NavbarWrapper {...props} color="green" widths="2">
       {navbarItems.map((props, index) => (
         <Menu.Item
           as="a"
@@ -31,7 +35,7 @@ const Navbar = props => (
         />
       ))}
     </NavbarWrapper>
-  </Container>
+  </NavbarContainer>
 );
 
 export { Navbar };
