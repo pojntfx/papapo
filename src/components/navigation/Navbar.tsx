@@ -1,11 +1,12 @@
 import * as React from "react";
 import { Menu, Container } from "semantic-ui-react";
+import styled from "styled-components";
 
 const navbarItems = [
   {
     icon: "video",
     content: "Videos",
-    href: "#video"
+    href: "#videos"
   },
   {
     icon: "image",
@@ -14,9 +15,13 @@ const navbarItems = [
   }
 ];
 
+const NavbarWrapper = styled(Menu)`
+  margin-top: 1em !important;
+`;
+
 const Navbar = props => (
-  <Menu fixed="tops" {...props} widths="2">
-    <Container>
+  <Container>
+    <NavbarWrapper {...props} widths="2">
       {navbarItems.map((props, index) => (
         <Menu.Item
           as="a"
@@ -25,8 +30,8 @@ const Navbar = props => (
           key={index}
         />
       ))}
-    </Container>
-  </Menu>
+    </NavbarWrapper>
+  </Container>
 );
 
 export { Navbar };
