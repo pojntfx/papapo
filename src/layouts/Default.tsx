@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { injectGlobal } from "styled-components";
 /// <reference path='../../types/logo.d.ts'/>
 import background from "../assets/bg.jpg";
+import { TagBar } from "../components/navigation/TagBar";
 
 injectGlobal`
   body {
@@ -22,6 +23,7 @@ const DefaultLayout = ({ children, ...props }) => (
   <React.Fragment>
     <AppBar />
     <Navbar />
+    <TagBar />
     <DefaultContainer {...props}>{children}</DefaultContainer>
   </React.Fragment>
 );
