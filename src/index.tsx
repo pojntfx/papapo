@@ -1,4 +1,6 @@
 import * as React from "react";
 import { render } from "react-dom";
+import "semantic-ui-css/semantic.min.css";
+import { Home } from "./routes/Home";
 
-render(<h1>PaPaPo</h1>, document.getElementById("root"));
+render(<Home />, document.getElementById("root"));
