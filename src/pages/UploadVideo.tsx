@@ -8,7 +8,7 @@ const Wrapper = styled(Segment)`
 `;
 
 const UploadVideo = props => (
-  <DefaultLayout {...props}>
+  <DefaultLayout title="Upload Videos" {...props}>
     <Wrapper>
       <h1>Upload Video</h1>
       <Button content="Upload" />

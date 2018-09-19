@@ -5,7 +5,7 @@ import { Navbar } from "../components/navigation/Navbar";
 import { TagBar } from "../components/navigation/TagBar";
 
 const Home = props => (
-  <DefaultLayout {...props}>
+  <DefaultLayout title="Videos" {...props}>
     <Navbar />
     <TagBar />
     <VideoCards />
