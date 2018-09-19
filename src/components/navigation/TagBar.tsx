@@ -8,14 +8,18 @@ const TagBarContainer = styled(Container)`
   margin-top: 1em;
 `;
 
+const TagBarSegment = styled(Segment)`
+  padding-top: 0.25em !important;
+`;
+
 const TagBar = props => (
   <TagBarContainer {...props}>
-    <Segment>
+    <TagBarSegment>
       <Divider content="Sorting" horizontal />
       <Sorting />
       <Divider content="Tags" horizontal />
       <Tags />
-    </Segment>
+    </TagBarSegment>
   </TagBarContainer>
 );
 
