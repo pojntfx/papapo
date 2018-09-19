@@ -1,9 +1,7 @@
 import * as React from "react";
 import { Card, Button, Icon } from "semantic-ui-react";
 import styled from "styled-components";
-/// <reference path='../../types/video.d.ts'/>
-import Plyr from "react-plyr";
-import "plyr/dist/plyr.css";
+import ReactPlayer from "react-player";
 
 const PublishDate = styled(Card.Meta)`
   margin-top: 0.5em;
@@ -33,9 +31,20 @@ const Actions = styled.div`
   white-space: nowrap;
 `;
 
+const Video = styled(ReactPlayer)`
+  & iframe {
+    border-top-left-radius: 0.28571429rem;
+    border-top-right-radius: 0.28571429rem;
+  }
+`;
+
 const VideoCard = () => (
   <Card>
-    <Plyr type="youtube" videoId="006ip4ndThE" />
+    <Video
+      url="https://www.youtube.com/watch?v=006ip4ndThE"
+      controls
+      width="100%"
+    />
     <Card.Content>
       <Card.Header>Giant panda bear does handstand!</Card.Header>
       <PublishDate>
