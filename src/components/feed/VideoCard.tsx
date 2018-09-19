@@ -1,6 +1,9 @@
 import * as React from "react";
 import { Card, Button, Icon } from "semantic-ui-react";
 import styled from "styled-components";
+/// <reference path='../../types/video.d.ts'/>
+import Plyr from "react-plyr";
+import "plyr/dist/plyr.css";
 
 const PublishDate = styled(Card.Meta)`
   margin-top: 0.5em;
@@ -32,8 +35,9 @@ const Actions = styled.div`
 
 const VideoCard = () => (
   <Card>
+    <Plyr type="youtube" videoId="006ip4ndThE" />
     <Card.Content>
-      <Card.Header>Video Header</Card.Header>
+      <Card.Header>Giant panda bear does handstand!</Card.Header>
       <PublishDate>
         <VideoCardIcon name="clock" />
         Published 3 hours ago

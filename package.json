@@ -4,8 +4,10 @@
   "description": "A simple video upload site for pandas (and Pascals)",
   "main": "src/index.tsx",
   "dependencies": {
+    "plyr": "^3.4.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-plyr": "^2.1.1",
     "semantic-ui-css": "^2.4.0",
     "semantic-ui-react": "^0.82.5",
     "serve": "^10.0.1",
