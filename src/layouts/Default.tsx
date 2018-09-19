@@ -6,6 +6,7 @@ import { injectGlobal } from "styled-components";
 /// <reference path='../../types/logo.d.ts'/>
 import background from "../assets/bg.jpg";
 import { Footer } from "../components/navigation/Footer";
+import { Helmet } from "react-helmet";
 
 injectGlobal`
   body {
@@ -14,8 +15,13 @@ injectGlobal`
   }
 `;
 
-const DefaultLayout = ({ children, ...props }) => (
+const DefaultLayout = ({ children, title, ...props }) => (
   <Fragment>
+    {title ? (
+      <Helmet>
+        <title>{title} | PaPaPo</title>
+      </Helmet>
+    ) : null}
     <AppBar />
     <Container {...props}>{children}</Container>
     <Footer />
