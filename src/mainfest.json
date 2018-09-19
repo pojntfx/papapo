@@ -3,6 +3,6 @@
   "name": "PaPaPo",
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#69A438",
+  "theme_color": "#21BA45",
   "background_color": "#ffffff"
 }
