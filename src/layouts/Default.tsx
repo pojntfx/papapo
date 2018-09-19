@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Fragment } from "react";
 import { Container } from "semantic-ui-react";
 import { Navbar } from "../components/navigation/Navbar";
 import { AppBar } from "../components/navigation/AppBar";
@@ -16,18 +17,14 @@ injectGlobal`
   }
 `;
 
-const DefaultContainer = styled(Container)`
-  padding-top: 1em;
-`;
-
 const DefaultLayout = ({ children, ...props }) => (
-  <React.Fragment>
+  <Fragment>
     <AppBar />
     <Navbar />
     <TagBar />
-    <DefaultContainer {...props}>{children}</DefaultContainer>
+    <Container {...props}>{children}</Container>
     <Footer />
-  </React.Fragment>
+  </Fragment>
 );
 
 export { DefaultLayout };
