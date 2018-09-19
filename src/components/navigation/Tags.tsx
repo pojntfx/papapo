@@ -1,26 +1,8 @@
 import * as React from "react";
 import { Label, Button, Icon } from "semantic-ui-react";
 import styled from "styled-components";
-
-const tags = [
-  {
-    label: "White",
-    selected: true
-  },
-  {
-    label: "Bamboo",
-    selected: true
-  },
-  {
-    label: "Red"
-  },
-  {
-    label: "Yellow"
-  },
-  {
-    label: "Amber"
-  }
-];
+/// <reference path="../../types/json.d.ts"/>
+import tags from "../../data/tags.json";
 
 const LabelGroup = styled(Label.Group)`
   display: flex;
