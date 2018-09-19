@@ -1,21 +1,22 @@
 import * as React from "react";
 import { Menu, Container } from "semantic-ui-react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const navbarItems = [
   {
     icon: "video",
     content: "Videos",
-    href: "#videos"
+    to: "/videos"
   },
   {
     icon: "image",
     content: "Images",
-    href: "#images"
+    to: "/images"
   }
 ];
 
-const NavbarContainer = styled(Container)`
+const NavbarContainer = styled.div`
   overflow-x: auto;
 `;
 
@@ -28,7 +29,7 @@ const Navbar = props => (
     <NavbarWrapper {...props} color="green" widths="2">
       {navbarItems.map((props, index) => (
         <Menu.Item
-          as="a"
+          as={Link}
           {...props}
           active={index === 0 ? true : false}
           key={index}

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Popup, Button, Grid, Header, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const UploadPopup = props => (
   <Popup
@@ -23,8 +24,8 @@ const UploadPopup = props => (
           icon="video"
           size="mini"
           content="Upload Video"
-          as="a"
-          href="#upload-video"
+          as={Link}
+          to="/upload/video"
         />
       </Grid.Column>
       <Grid.Column textAlign="center" verticalAlign="middle">
@@ -34,8 +35,8 @@ const UploadPopup = props => (
           icon="image"
           size="mini"
           content="Upload Image"
-          as="a"
-          href="#upload-image"
+          as={Link}
+          to="/upload/image"
         />
       </Grid.Column>
     </Grid>

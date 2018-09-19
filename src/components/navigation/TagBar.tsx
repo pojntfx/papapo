@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Tags } from "./Tags";
 import { Sorting } from "./Sorting";
 
-const TagBarContainer = styled(Container)`
+const TagBarContainer = styled.div`
   margin-top: 1em;
 `;
 

@@ -4,6 +4,7 @@ import styled from "styled-components";
 /// <reference path='../../types/logo.d.ts'/>
 import logo from "../../assets/logo.png";
 import { UploadPopup } from "./UploadPopup";
+import { Link } from "react-router-dom";
 
 const AppBarContainer = styled(Container)`
   padding-top: 1em !important;
@@ -18,7 +19,7 @@ const Action = styled(Menu.Item)`
   padding-right: 0.5em !important;
 `;
 
-const LogoWrapper = styled.a`
+const LogoWrapper = styled(Link)`
   margin-left: auto !important;
 `;
 
@@ -38,7 +39,7 @@ const AppBar = props => (
           <Button.Content hidden>Search</Button.Content>
         </Button>
       </Action>
-      <LogoWrapper href="#">
+      <LogoWrapper to="/">
         <Logo src={logo} />
       </LogoWrapper>
       <Menu.Menu position="right">
