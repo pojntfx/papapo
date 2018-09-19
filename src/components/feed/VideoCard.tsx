@@ -38,29 +38,30 @@ const Video = styled(ReactPlayer)`
   }
 `;
 
-const VideoCard = () => (
-  <Card>
-    <Video
-      url="https://www.youtube.com/watch?v=006ip4ndThE"
-      controls
-      width="100%"
-    />
+const VideoCard = ({
+  url,
+  title,
+  publishDate,
+  description,
+  viewCount,
+  likeCount,
+  shareCount,
+  ...props
+}: any) => (
+  <Card {...props}>
+    <Video url={url} controls width="100%" />
     <Card.Content>
-      <Card.Header>Giant panda bear does handstand!</Card.Header>
+      <Card.Header>{title}</Card.Header>
       <PublishDate>
         <VideoCardIcon name="clock" />
-        Published 3 hours ago
+        Published {publishDate} ago
       </PublishDate>
-      <Card.Description>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-        pariatur aspernatur optio ipsum dolorum quisquam accusantium incidunt
-        iusto ratione harum maxime laudantium atque.
-      </Card.Description>
+      <Card.Description>{description}</Card.Description>
     </Card.Content>
     <ActionsWrapper extra>
       <ViewsWrapper>
         <VideoCardIcon name="eye" />
-        3206 views
+        {viewCount} views
       </ViewsWrapper>
       <Actions>
         <Button
@@ -71,7 +72,7 @@ const VideoCard = () => (
             basic: true,
             color: "pink",
             pointing: "left",
-            content: "37"
+            content: likeCount
           }}
         />
         <Button
@@ -82,7 +83,7 @@ const VideoCard = () => (
             basic: true,
             color: "green",
             pointing: "left",
-            content: "12"
+            content: shareCount
           }}
         />
       </Actions>
