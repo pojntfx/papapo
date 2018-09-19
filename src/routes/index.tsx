@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Fragment } from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { HashRouter as Router, Route, Redirect } from "react-router-dom";
 import { Home } from "./Home";
 import { UploadVideo } from "./UploadVideo";
 
