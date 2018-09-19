@@ -1,18 +1,8 @@
 import * as React from "react";
-import { Menu, Container, Button } from "semantic-ui-react";
+import { Menu, Container, Button, Icon } from "semantic-ui-react";
 import styled from "styled-components";
 /// <reference path='../../types/logo.d.ts'/>
 import logo from "../../assets/logo.png";
-
-const leftItem = {
-  icon: "search",
-  content: "Search"
-};
-
-const rightItem = {
-  icon: "upload",
-  content: "Upload"
-};
 
 const AppBarContainer = styled(Container)`
   padding-top: 1em !important;
@@ -32,22 +22,32 @@ const LogoWrapper = styled.a`
 `;
 
 const Logo = styled.img`
-  height: 32.5px;
-  margin-top: 10px;
+  height: 25px;
+  margin-top: 15px;
 `;
 
 const AppBar = props => (
   <AppBarContainer>
     <AppBarWrapper {...props}>
       <Action>
-        <Button color="green" {...leftItem} />
+        <Button animated="fade" color="green">
+          <Button.Content visible>
+            <Icon name="search" />
+          </Button.Content>
+          <Button.Content hidden>Search</Button.Content>
+        </Button>
       </Action>
       <LogoWrapper href="#">
         <Logo src={logo} />
       </LogoWrapper>
       <Menu.Menu position="right">
         <Action>
-          <Button color="pink" {...rightItem} />
+          <Button animated="fade" color="pink">
+            <Button.Content visible>
+              <Icon name="upload" />
+            </Button.Content>
+            <Button.Content hidden>Upload</Button.Content>
+          </Button>
         </Action>
       </Menu.Menu>
     </AppBarWrapper>
