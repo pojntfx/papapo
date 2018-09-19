@@ -8,21 +8,14 @@ const TagBarContainer = styled(Container)`
   margin-top: 1em;
 `;
 
-const TagBarWrapper = styled(Segment)`
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 0 !important;
-`;
-
 const TagBar = props => (
   <TagBarContainer {...props}>
-    <TagBarWrapper>
+    <Segment>
       <Divider content="Sorting" horizontal />
       <Sorting />
       <Divider content="Tags" horizontal />
       <Tags />
-    </TagBarWrapper>
+    </Segment>
   </TagBarContainer>
 );
 
