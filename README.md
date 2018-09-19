@@ -2,6 +2,10 @@
 
 A simple video upload site for pandas (and Pascals).
 
+## Demo
+
+See [papapo.ga](https://papapo.ga) for the official instance.
+
 ## Usage
 
 ```bash
