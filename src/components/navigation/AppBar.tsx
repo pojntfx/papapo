@@ -3,6 +3,7 @@ import { Menu, Container, Button, Icon } from "semantic-ui-react";
 import styled from "styled-components";
 /// <reference path='../../types/logo.d.ts'/>
 import logo from "../../assets/logo.png";
+import { UploadPopup } from "./UploadPopup";
 
 const AppBarContainer = styled(Container)`
   padding-top: 1em !important;
@@ -42,12 +43,7 @@ const AppBar = props => (
       </LogoWrapper>
       <Menu.Menu position="right">
         <Action>
-          <Button animated="fade" color="pink">
-            <Button.Content visible>
-              <Icon name="upload" />
-            </Button.Content>
-            <Button.Content hidden>Upload</Button.Content>
-          </Button>
+          <UploadPopup />
         </Action>
       </Menu.Menu>
     </AppBarWrapper>
