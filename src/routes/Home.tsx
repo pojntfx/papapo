@@ -1,12 +1,10 @@
 import * as React from "react";
 import { DefaultLayout } from "../layouts/Default";
-import { Segment } from "semantic-ui-react";
+import { VideoCards } from "../components/feed/VideoCards";
 
 const Home = props => (
   <DefaultLayout {...props}>
-    <Segment>
-      <h1>PaPaPo</h1>
-    </Segment>
+    <VideoCards />
   </DefaultLayout>
 );
 
